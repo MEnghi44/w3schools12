@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import ProjectItem from "./components/ProjectItem";
+import John from "./components/John";
+import Contact from "./components/Contact";
+import Hero1 from "./components/Heoro1";
+import Footer from "./components/Footer";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Navbar/>
+        <div className="container">
+          <Hero />
+          <Projects />
+          <ProjectItem/>
+          <About/>
+          <John/>
+          <Contact/>
+          <Hero1/>
+        </div>
+        <Footer/>
+      </div>
+    );
+  }
+}
+ReactDom.render(<App />, document.querySelector("#root"));
